@@ -1,5 +1,8 @@
 # Librogram
-Librogram: APLICAȚIE PENTRU CITITORI ȘI RELAȚIONAREA ÎNTRE UTILIZATORI
+Librogram: APLICAȚIE PENTRU CITITORI ȘI RELAȚIONAREA ÎNTRE UTILIZATORI   
+repository-uri:  
+   https://github.com/BogoAdi/Librogram   
+   https://gitlab.upt.ro/adrian.bogosel/Librogram  
 # Instalare și rulare proiect
 
 Sunt necesare urmatoarele programe pentru a rula cu succes aplicatia:      
