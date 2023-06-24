@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.Domain", "Librogram.Domain\Librogram.Domain.csproj", "{A35976FD-8E29-4904-BBA1-49B33F900291}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.Dal", "Librogram.Dal\Librogram.Dal.csproj", "{9B54BE6F-362B-4FBD-A282-1754733065CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.Application", "Librogram.Application\Librogram.Application.csproj", "{D0B0619F-37B6-4FFE-B604-8B65311BE489}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.Infrastructure", "Librogram.Infrastructure\Librogram.Infrastructure.csproj", "{A13F0DE2-D00B-4DD5-85F5-A176EED8C585}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.Api", "Librogram.Api\Librogram.Api.csproj", "{2CE9F17A-7774-455C-9CBE-450D84958EAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librogram.IntegrationTests", "Librogram.UnitTests\Librogram.IntegrationTests.csproj", "{E1117114-1C4D-486A-BA9B-B3E768FA363B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A35976FD-8E29-4904-BBA1-49B33F900291} = {A35976FD-8E29-4904-BBA1-49B33F900291}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Librogram.Tests", "Librogram.Tests\Librogram.Tests.csproj", "{05B8E3CE-1D92-4232-BA9D-6FA5913E61FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A35976FD-8E29-4904-BBA1-49B33F900291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35976FD-8E29-4904-BBA1-49B33F900291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35976FD-8E29-4904-BBA1-49B33F900291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35976FD-8E29-4904-BBA1-49B33F900291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B54BE6F-362B-4FBD-A282-1754733065CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B54BE6F-362B-4FBD-A282-1754733065CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B54BE6F-362B-4FBD-A282-1754733065CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B54BE6F-362B-4FBD-A282-1754733065CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B0619F-37B6-4FFE-B604-8B65311BE489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B0619F-37B6-4FFE-B604-8B65311BE489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B0619F-37B6-4FFE-B604-8B65311BE489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B0619F-37B6-4FFE-B604-8B65311BE489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13F0DE2-D00B-4DD5-85F5-A176EED8C585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13F0DE2-D00B-4DD5-85F5-A176EED8C585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13F0DE2-D00B-4DD5-85F5-A176EED8C585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13F0DE2-D00B-4DD5-85F5-A176EED8C585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE9F17A-7774-455C-9CBE-450D84958EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE9F17A-7774-455C-9CBE-450D84958EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE9F17A-7774-455C-9CBE-450D84958EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE9F17A-7774-455C-9CBE-450D84958EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1117114-1C4D-486A-BA9B-B3E768FA363B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1117114-1C4D-486A-BA9B-B3E768FA363B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1117114-1C4D-486A-BA9B-B3E768FA363B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1117114-1C4D-486A-BA9B-B3E768FA363B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B8E3CE-1D92-4232-BA9D-6FA5913E61FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B8E3CE-1D92-4232-BA9D-6FA5913E61FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B8E3CE-1D92-4232-BA9D-6FA5913E61FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B8E3CE-1D92-4232-BA9D-6FA5913E61FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {887005F5-5385-4258-A92C-DE92D33D1955}
+	EndGlobalSection
+EndGlobal
