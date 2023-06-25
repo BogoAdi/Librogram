@@ -166,6 +166,7 @@ const MyProfilePage = () => {
             const newVal = await getPostById(postId);
             const updatedPosts = JSON.parse(JSON.stringify(posts));
             const index = updatedPosts.findIndex((post) => post.id === postId);
+            console.log(index);
             console.log(newVal);
             if (index !== -1) {
                 updatedPosts[index] = newVal;
@@ -176,6 +177,9 @@ const MyProfilePage = () => {
         }
     }
 
+    useState(() => {
+        console.log(posts);
+    }, [posts])
 
     const handlePostReacted = async (postId) => {
         try {

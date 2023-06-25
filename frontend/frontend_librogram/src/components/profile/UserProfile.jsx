@@ -146,16 +146,20 @@ const UserProfile = () => {
             }
         }
     }
-    const handleChangesFromComments = (postId) => {
-        const newVal = getPostById(postId);
-        const updatedPosts = posts.map((post) => {
-            if (post.id === postId) {
-                return newVal;
+    const handleChangesFromComments = async (postId) => {
+        try {
+            const newVal = await getPostById(postId);
+            const updatedPosts = JSON.parse(JSON.stringify(posts));
+            const index = updatedPosts.findIndex((post) => post.id === postId);
+            console.log(index);
+            console.log(newVal);
+            if (index !== -1) {
+                updatedPosts[index] = newVal;
+                setPosts(updatedPosts);
             }
-            else {
-                return post;
-            }
-        })
+        } catch (error) {
+            console.log(error);
+        }
     }
     const handlePostReacted = async (postId) => {
         try {
@@ -232,7 +236,7 @@ const UserProfile = () => {
                                     posts.map((post) => (
                                         <PostContainer post={post} userId={decodedTokenId}
                                             onUpdateReactions={() => handlePostReacted(post.id)}
-                                            onChangesOnComments={handleChangesFromComments} />
+                                            onChangesOnComments={() => handleChangesFromComments(post.id)} />
                                     ))
                                 ) : (
                                     <Typography variant="body1">No posts available.</Typography>

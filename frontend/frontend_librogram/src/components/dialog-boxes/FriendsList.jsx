@@ -86,7 +86,7 @@ const FriendsList = ({ onClose, userId }) => {
                         <ListGroup.Item key={friend.userId}>
                             <Box display="flex" alignItems="center" justifyContent="space-between">
                                 <Box display="flex" alignItems="center">
-                                    <Avatar src={friend.profilePhoto} className="me-3" />
+                                    <Avatar src={friend.profilePicture} className="me-3" />
                                     <span style={{ marginRight: '10px' }}>{friend.name}</span>
                                 </Box>
                                 {decodedTokenId === userId &&

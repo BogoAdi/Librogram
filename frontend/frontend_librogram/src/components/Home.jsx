@@ -300,6 +300,8 @@ const Home = () => {
       const newVal = await getPostById(postId);
       const updatedPosts = JSON.parse(JSON.stringify(posts));
       const index = updatedPosts.findIndex((post) => post.id === postId);
+      console.log(newVal);
+      console.log(updatedPosts);
       setApiError(false);
       if (index !== -1) {
         updatedPosts[index] = newVal;
@@ -308,6 +310,7 @@ const Home = () => {
     } catch (error) {
       setApiError(true);
     }
+
   }
   const [isLoading, setIsLoading] = useState(true);
   const [apiError, setApiError] = useState(false);

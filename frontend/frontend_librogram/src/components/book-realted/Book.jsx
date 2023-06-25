@@ -145,10 +145,10 @@ export default function Book() {
 
   useEffect(() => {
     if (bookData !== null && userDetails !== null && decodedTokenId !== "") {
-      console.log(userDetails.favouriteBooks.some((id) => id === bookData.uniqueBookId));
-      setIsThisBookFav(userDetails.favouriteBooks.some((book) => book.id === bookData.uniqueBookId))
+      console.log(userDetails.favouriteBooks.some((uniqueBookId) => uniqueBookId === bookData.uniqueBookId));
+      setIsThisBookFav(userDetails.favouriteBooks.some((book) => book.uniqueBookId === bookData.uniqueBookId))
     }
-  }, [accessToken, bookData, userDetails])
+  }, [accessToken, bookData, userDetails]);
   return (
     <>
       <Modal

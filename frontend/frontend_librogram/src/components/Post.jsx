@@ -279,7 +279,9 @@ const PostContainer = ({ post, userId, onUpdatePost, onChangesOnComments, onUpda
 
     }, [decodedTokenId, doneLoading])
 
-
+    useEffect(() => {
+        console.log(post.commentsCount);
+    }, [post])
     return (
         <>{isDeleted !== true && post &&
             <Card key={post.id} style={{ margin: '16px', padding: '16px' }}>
@@ -401,7 +403,7 @@ const PostContainer = ({ post, userId, onUpdatePost, onChangesOnComments, onUpda
                                         <FavoriteBorderOutlined />
                                     </IconButton>
                                     <ButtonBase component="span" onClick={handleReactionsClick}>
-                                        {post.reactions.length} reactions
+                                        {post.reactions.length !== 0 ? post.reactions[0].count : 0} reactions
                                     </ButtonBase>
                                 </Box>
                                 {showReactions && (
