@@ -90,12 +90,18 @@ const MyLibraryBooks = () => {
         console.log('books:', Object.is(books, updatedRowBooks));
         console.log(books);
     };
+    useEffect(() => {
+        setNumberOfBooks(books.length);
+    }, [books])
     const addBook = (book) => {
         const _ = require('lodash');
         let clone = _.cloneDeep(books);
-        clone.unshift(book);
+        setBooks(null);
+        clone.push(book);
+        console.log(book);
         setBooks(clone);
     };
+    const [numberOfBooks, setNumberOfBooks] = useState(0);
     return (
         <div className="container-fluid">
             <div className="row">
@@ -104,7 +110,7 @@ const MyLibraryBooks = () => {
                         <Sidebar />
                     </div>
                 </div>
-                {books.length !== 0 &&
+                {numberOfBooks === books.length &&
                     <div className="col-lg-10">
                         <div className="px-5 ps-lg-5 my-1">
                             <div className="text-center mt-5 mb-2">

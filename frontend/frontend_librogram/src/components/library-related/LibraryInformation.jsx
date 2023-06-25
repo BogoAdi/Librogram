@@ -88,16 +88,16 @@ const Libraryinformations = () => {
                                     <Box display="flex" flexDirection="column" alignItems="center">
                                         <Box position="relative">
                                             <img
-                                                src="https://via.placeholder.com/750x400" // Replace with the library's photo URL
+                                                src={library.profileImage} 
                                                 alt="Library Photo"
                                                 style={{ width: '750px', height: '400px' }}
                                             />
                                         </Box>
 
                                         <Box mt={4}>
-                                            <Typography variant="h4">Library Name</Typography>
+                                            <Typography variant="h4">{library.name}</Typography>
                                             <Typography variant="subtitle1">
-                                                Owner: {library.owner.name} | Email: {library.owner.email}
+                                                Owner: {library.owner.name}
                                             </Typography>
                                             <Typography variant="subtitle1">
                                                 Number of Books: {library.numberOfBooks}

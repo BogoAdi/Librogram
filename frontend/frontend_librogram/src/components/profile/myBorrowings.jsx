@@ -9,7 +9,7 @@ import api from "../../API/api";
 import MyBorrowingsTable from "./MyBorrowingsTable";
 
 const MyBorrowings = () => {
-    const [borrowings, setBorrowings] = useState([]);
+    const [borrowings, setBorrowings] = useState(null);
     const { instance, inProgress, accounts } = useMsal();
     const [decodedTokenId, setDecodedTokenId] = useState("");
     const [accessToken, setAccessToken] = useState("");
@@ -92,7 +92,7 @@ const MyBorrowings = () => {
                         <Sidebar />
                     </div>
                 </div>
-                {borrowings.length !== 0 &&
+                {borrowings !== null &&
                     <div className="col-lg-10">
                         <div className="px-5 ps-lg-5 my-1">
                             <div className="text-center mt-5 mb-2">
